@@ -1,0 +1,43 @@
+.speedometerContainer{
+    max-width: 500px;
+    margin: auto;
+    .speedometer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size: 5rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+    .info{
+        .maxSpeed{
+            p{
+                color: grey;
+            }
+        }
+        .average{
+            p{
+                color: grey;
+            }
+        }
+    }
+    .statusBtn{
+        .stopBtn{
+            background-color: #000;
+            color: #fff;
+        }
+        button{
+            padding: 1rem;
+            border: none;
+            width: 100%;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+        
+    }
+}

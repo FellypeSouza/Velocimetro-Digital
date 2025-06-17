@@ -1,0 +1,24 @@
+<section class="speedometerContainer">
+    <section class="speedometer">
+        <h1>{{speedElement}}</h1>
+        <h2>{{unitSpeed}}</h2>
+    </section>
+    <section class="info">
+        <section class="maxSpeed">
+            <p>Velocidade Média</p>
+            <h2>{{speedElement}} {{unitSpeed}}</h2>
+        </section>
+        <section class="average">
+            <p>Velocidade Máxima</p>
+            <h2>{{speedElement}} {{unitSpeed}}</h2>
+        </section>
+    </section>
+    <section class="statusBtn">
+        @if(changeButton == true){
+            <button class="startBtn" (click)="startSpeedometer()">INICIAR</button>
+        }
+        @else{
+            <button class="stopBtn" (click)="stopSpeedometer()">PARAR</button>
+        }
+    </section>
+</section>
