@@ -1,6 +1,11 @@
+$infoTitleFontSize: 3rem;
+$infoValueFontSize: 0.85rem;
+$LatLongValueFontSize: 0.9rem;
+
 .speedometerContainer{
-    max-width: 500px;
+    max-width: 700px;
     margin: auto;
+    margin-top: 5rem;
     .speedometer{
         display: flex;
         align-items: center;
@@ -13,14 +18,45 @@
         }
     }
     .info{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin: 1rem;
+        .maxSpeed, .latitude, .longitude{
+            width: 200px;
+            height: 70px;
+            padding: 0.5rem;
+            background-color: #0000003f;
+            border-radius: 10px;
+        }
         .maxSpeed{
+            .maxSpeedValues{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    font-size: $infoTitleFontSize;
+                    margin: 0;
+                }
+                h4{
+                    font-size: $infoValueFontSize;
+                }
+            }
             p{
                 color: grey;
+                margin: 0;
             }
         }
-        .average{
+        .latitude{
             p{
                 color: grey;
+                margin: 0;
+            }
+        }
+        .longitude{
+            p{
+                color: grey;
+                margin: 0;
             }
         }
     }
@@ -38,6 +74,6 @@
             font-size: 1rem;
             font-weight: 800;
         }
-        
+
     }
 }

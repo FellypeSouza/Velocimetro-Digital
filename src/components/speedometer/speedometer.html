@@ -5,13 +5,20 @@
     </section>
     <section class="info">
         <section class="maxSpeed">
-            <p>Velocidade Média</p>
-            <h2>{{speedElement}} {{unitSpeed}}</h2>
+            <p>Velocidade Max</p>
+            <section class="maxSpeedValues">
+                <h2>{{maxSpeed}}</h2>
+                <h4>{{unitSpeed}}</h4>
+            </section>
         </section>
-        <section class="average">
-            <p>Velocidade Máxima</p>
-            <h2>{{speedElement}} {{unitSpeed}}</h2>
+        <section class="latitude">
+            <p>Latitude</p>
+            <h4>{{latitudeValue}}</h4>
         </section>
+        <section class="longitude">
+            <p>Longitude</p>
+            <h4>{{longitudeValue}}</h4>
+        </section>        
     </section>
     <section class="statusBtn">
         @if(changeButton == true){
