@@ -77,3 +77,15 @@ $LatLongValueFontSize: 0.9rem;
 
     }
 }
+@media (max-width:700px) {
+    .speedometerContainer{
+        .info{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .maxSpeed, .latitude, .longitude{
+                margin: 1rem;
+            }
+        }
+    }
+}

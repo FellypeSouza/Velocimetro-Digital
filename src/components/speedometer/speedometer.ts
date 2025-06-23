@@ -14,10 +14,12 @@ export class Speedometer {
   maxSpeed:number = 0;
   latitudeValue:number = 0;
   longitudeValue:number = 0;
+  activeTime:string = "";
 
   startSpeedometer():void{
     //Mudar o estado do botão
     this.changeButton = false;
+    this.activeTime = this.timer();
 
     //Começo a capturar a localização
     this.watchId = navigator.geolocation.watchPosition((position)=>{
@@ -51,5 +53,18 @@ export class Speedometer {
     this.changeButton = true;
     //Paro de capturar a localização
     navigator.geolocation.clearWatch(this.watchId);
+  }
+  timer():string{
+    let sec:number = 0o0;
+    let min:number = 0;
+    let time:string = `${min} : ${sec}`;
+
+    setInterval(()=>{
+      time = `${min} : ${sec++}`;
+      console.log(time);
+      return time;
+    }, 1000);
+    
+    return time;
   }
 }
